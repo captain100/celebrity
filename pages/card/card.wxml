@@ -1,0 +1,50 @@
+<view class="container">
+    <swiper style="height: {{showHeight}}px" indicator-dots="true" indicator-color="rgba(0, 0, 0, 0)" autoplay="true" circular="true" bindchange="">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" mode="aspectFill" style="width: 100%; height:100%;" />
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="section weapp-border-bottom">
+        <view class="card-name">{{userinfo.name}}</view>
+        <view class="card-age {{userinfo.sex ? 'card-sex-man': 'card-sex-nv'}}">
+            {{userinfo.age}}
+        </view>
+        <view class="card-xing">{{userinfo.xing}}</view>
+        <view class="card-time">{{userinfo.lastTime}}</view>
+        <view class="card-desc">{{userinfo.desc}}</view>
+    </view>
+    <view class="section weapp-border-bottom" wx:if="{{ userinfo.info.length > 0 }}">
+        <view class='card-classinfo'>我的信息</view>
+        <block wx:for="{{userinfo.info}}">
+            <view>{{item.text}}</view>
+        </block>
+    </view>
+    <view class="section weapp-border-bottom" wx:if="{{ userinfo.tag.length > 0 }}">
+        <view class='card-classinfo'>我的标签</view>
+        <block wx:for="{{userinfo.tag}}">
+            <view>{{item.text}}</view>
+        </block>
+    </view>
+    <view class="section weapp-border-bottom" wx:if="{{ userinfo.love.length > 0 }}">
+        <view class='card-classinfo'>我的兴趣</view>
+        <block wx:for="{{userinfo.love}}">
+            <view>{{item.text}}</view>
+        </block>
+    </view>
+
+    <view class="section weapp-border-bottom" wx:if="{{ userinfo.answer.length > 0 }}">
+        <view class='card-classinfo'>我的问答</view>
+        <block wx:for="{{userinfo.answer}}">
+            <view>{{item.q}}</view>
+            <view>{{item.a}}</view>
+        </block>
+    </view>
+</view>
+
+<view class="tools">
+    <view class="love-btn" bindtap="loveBtn">喜欢Ta</view>
+    <view class="share-btn" bindtap="shareBtn">我也要分享</view>
+</view>

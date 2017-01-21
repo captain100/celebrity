@@ -1,0 +1,115 @@
+/**app.wxss**/
+.container {
+    height: 100%;
+    box-sizing: border-box;
+    color: #ccc;
+} 
+.bg-black {
+    background: #090723;
+}
+
+@media screen and (max-width: 321px) {
+    .font-title { font-size: 16px;}
+    .font-subhead {font-size: 16px;}
+    .font-wide { font-size: 14px; }
+    .font-normal { font-size: 12px; }
+    .font-mini { font-size: 12px; }
+    body { font-size: 12px; }
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+    .font-title{font-size:18px}
+    .font-subhead{font-size:17px;}
+    .font-wide{font-size:16px;}
+    .font-normal{font-size:14px;}
+    .font-mini{font-size:12px;}
+    body{font-size:14px;}
+}
+
+@media screen and (min-width:400px){
+    .font-title{font-size:20px}
+    .font-subhead{font-size:19px;}
+    .font-wide{font-size:18px;}
+    .font-normal{font-size:16px;}
+    .font-mini{font-size:14px;}
+    body{font-size:16px;}
+}
+
+
+/* 处理 安卓 上 不显示 1rpx的 边线 */
+.weapp-border-top, .weapp-border-bottom, .weapp-border-topandbottom {
+    background-repeat: repeat-x;
+    background-size: 100% 1px;
+}
+
+.weapp-border-top {
+    background-position: left top;
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0));
+}
+
+.weapp-border-bottom {
+    background-position: left bottom;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0));
+}
+
+.weapp-border-topandbottom {
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0)),
+        -webkit-gradient(linear,left top,left bottom,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0));
+    background-position: top, bottom;
+}
+
+.weapp-border {
+    border:0;
+}
+
+.weapp-border:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: 
+        -webkit-gradient(linear,left bottom,left top,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0)),
+        -webkit-gradient(linear,left top,right top,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0)),
+        -webkit-gradient(linear,left top,left bottom,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0)),
+        -webkit-gradient(linear,right top,left top,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0));
+    -webkit-background-size: 100% 1px,1px 100%,100% 1px,1px 100%;
+    background-size: 100% 1px,1px 100%,100% 1px,1px 100%;
+    background-repeat: no-repeat;
+    background-position: top,right,bottom,left;
+    padding: 1px;
+    -webkit-box-sizing: border-box;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.weapp-border-left, .weapp-border-right {
+    background-repeat: repeat-y;
+    -webkit-background-size: 1px 100%;
+}
+
+.weapp-border-left {
+    background-image: -webkit-gradient(linear,right top, left top,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0));
+    background-position:  left top; 
+}
+.weapp-border-right {
+    background-image: 
+        -webkit-gradient(linear,right top, left top,color-stop(0.5,transparent),color-stop(0.5,#e0e0e0),to(#e0e0e0));
+    background-position:  right top;
+}
+.weapp-border-radius:before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #e0e0e0;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    padding: 1px;
+    -webkit-box-sizing: border-box;
+    border-radius: 8px;
+    pointer-events: none;
+}

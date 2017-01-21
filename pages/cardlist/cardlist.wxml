@@ -1,0 +1,14 @@
+<view>
+    <scroll-view class="cardlist-container" scroll-y="true" style="height: {{showHeight}}px;">
+        <block wx:for="{{list}}">
+            <view class="cardlist-item" catchtap="getCard" >
+                <view bindtap="deleteCard">X</view>
+                <view >{{item.name}}</view>
+            </view>
+        </block>
+    </scroll-view>
+
+    <view class="edit-btn" bindtap="editCard">
+        添加
+    </view>
+</view>

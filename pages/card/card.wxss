@@ -1,0 +1,93 @@
+.section {
+    padding: 10px;
+}
+.card-name {
+    font-size: 38rpx;
+    line-height: 50rpx;
+    color: #000; 
+}
+.card-age {
+    display: inline-block;
+    padding: 5rpx 10rpx 5rpx 40rpx;
+    font-size: 24rpx;
+    color: #fff;
+    border-radius: 10rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    
+}
+.card-sex-man {
+    background: red;
+    background-image: url('/images/man.png');
+    background-repeat: no-repeat;
+    background-size: 34rpx;
+    background-position: 3rpx;
+}
+
+.card-sex-nv {
+    background: red;
+    background-image: url('/images/nv.png');
+    background-repeat: no-repeat;
+    background-size: 34rpx;
+    background-position: 3rpx;
+}
+
+.card-xing {
+    display:  inline-block;
+    padding: 5rpx 10rpx;
+    color: #fff;
+    font-size: 24rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    background: yellowgreen;
+    margin: 0 10rpx;
+    border-radius: 10rpx;
+}
+
+.card-time {
+    font-size: 24rpx;
+    line-height: 50rpx;
+}
+.card-desc {
+    font-size: 32rpx;
+}
+
+.card-classinfo {
+    font-size: 32rpx;
+    line-height: 50rpx;
+    color: #a50d0d;
+}
+.tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100rpx;
+    background: #fff;
+}
+.tools .love-btn {
+    font-size: 40rpx;
+    line-height: 60rpx;
+    margin: 10rpx;
+    color: #fff;
+    padding:10rpx 20rpx 10rpx 80rpx;
+    background: red;
+    border-radius: 20rpx;
+    background-image: url('../../images/hot_btn.png');
+    background-repeat: no-repeat;
+    background-size: 60rpx;
+    background-position: top 10rpx left 20rpx;
+}
+
+.tools .share-btn {
+    font-size: 40rpx;
+    line-height: 60rpx;
+    margin: 10rpx;
+    color: #fff;
+    padding:10rpx 20rpx 10rpx 80rpx;
+    background: green;
+    border-radius: 20rpx;
+    background-image: url('/images/share.png');
+    background-repeat: no-repeat;
+    background-size: 50rpx;
+    background-position: top 15rpx left 20rpx;
+}
